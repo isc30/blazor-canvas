@@ -16,7 +16,7 @@ It is required to call `Context.RenderAsync()` to actually perform the rendering
 
 > Please remember to call `Context.RenderAsync()` in the end to actually perform the rendering in the canvas!
 
-# 2D Rendering Context
+## 2D Rendering Context
 
 The lib includes some components ready to be used for 2D rendering:
 
