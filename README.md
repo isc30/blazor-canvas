@@ -39,8 +39,8 @@ The lib includes some components ready to be used for 2D rendering:
 
 - ### `Surface2DComponent` for realtime rendering
 
-  Same as `Canvas2DComponent`, but this time you will need to override `Task<bool> RequestFrameAsync()`.
-  Also, add `[JSInvokable]` to `RequestFrameAsync` so it can be automatically invoked from javascript every frame by the browser (using `requestAnimationFrame` in the background).
+  Same as `Canvas2DComponent`, but this time you will need to override `Task<bool> RequestFrameAsync()`.<br/>
+  Also, add `[JSInvokable]` to `RequestFrameAsync` so it can be automatically invoked from javascript every frame by the browser (using `requestAnimationFrame` in the background).<br/>
   Return `true` from `RequestFrameAsync` if you want a new frame to be requested and `false` if you want to stop the realtime rendering.
 
   ```cs
