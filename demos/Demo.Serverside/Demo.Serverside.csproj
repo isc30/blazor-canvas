@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.0</TargetFramework>
+        <LangVersion>8.0</LangVersion>
+        <RootNamespace>Isc.Blazor.Canvas.Demo.Serverside</RootNamespace>
+        <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\src\Blazor.Canvas\Blazor.Canvas.csproj" />
+    </ItemGroup>
+
+</Project>

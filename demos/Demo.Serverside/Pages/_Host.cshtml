@@ -1,0 +1,20 @@
+﻿@page "/"
+@namespace Isc.Blazor.Canvas.Demo.Serverside.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>demo-serverside</title>
+    <base href="~/" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <script src="~/blazor-canvas.js"></script>
+</head>
+<body>
+    <app>@(await Html.RenderComponentAsync<App>())</app>
+
+    <script src="_framework/blazor.server.js"></script>
+</body>
+</html>

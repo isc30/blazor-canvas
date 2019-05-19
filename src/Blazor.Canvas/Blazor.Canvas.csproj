@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <OutputType>Library</OutputType>
+
+        <LangVersion>8.0</LangVersion>
+        <RazorLangVersion>3.0</RazorLangVersion>
+        <TypeScriptToolsVersion>latest</TypeScriptToolsVersion>
+        
+        <AssemblyName>Isc.Blazor.Canvas</AssemblyName>
+        <RootNamespace>Isc.Blazor.Canvas</RootNamespace>
+
+        <IsPackable>true</IsPackable>
+        <IncludeContentInPack>false</IncludeContentInPack>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <Authors>isc30</Authors>
+        <Company>CodeIsc</Company>
+        <PackageId>Blazor-Canvas</PackageId>
+        <Product>Blazor Canvas</Product>
+        <Title>Blazor Canvas</Title>
+        <Description>
+            Blazor components for Canvas manipulation
+        </Description>
+        <PackageTags>blazor components canvas 2d</PackageTags>
+        <RepositoryUrl>https://github.com/isc30/blazor-canvas</RepositoryUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <Version>1.0.9</Version>
+        <RepositoryType>git</RepositoryType>
+        <Copyright>Ivan Sanz Carasa (isc30)</Copyright>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <TypeScriptCompile Include="**\*.ts" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="3.5.0">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.AspNetCore.Blazor" Version="3.0.0-preview4-19216-03" />
+        <PackageReference Include="Microsoft.AspNetCore.Blazor.Build" Version="3.0.0-preview4-19216-03" PrivateAssets="all" />
+        <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include="**\*.js" LogicalName="blazor:js:%(RecursiveDir)%(Filename)%(Extension)" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Interop\dist\blazor-canvas.min.js" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Interop\dist\" />
+    </ItemGroup>
+
+</Project>
