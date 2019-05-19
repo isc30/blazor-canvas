@@ -5,6 +5,8 @@ Blazor Canvas Components for easy graphics rendering
 ## Supported Rendering Contexts
 
 - [x] 2D
+  - [x] WebAssembly
+  - [x] ServerSide Blazor
 - [ ] WebGL (WIP)
 
 ## Important Note about Context
